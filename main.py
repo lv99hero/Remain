@@ -38,35 +38,27 @@ def beginnings(): ### Beginning questions for your class ###
   time.sleep(2)
   delay_print3("""You remember going to school, attending classes.\nYou did your best to make your parents proud.\nYour father wasn't around much.\nHe had to help keep the town safe.\n""")
   time.sleep(1)
-  delay_print2("He had to keep ")
-  delay_print1("YOU ")
-  delay_print2("safe.\n")
+  delay_print3("He had to keep ")
+  delay_print2("YOU ")
+  delay_print3("safe.\n")
   time.sleep(2)
-  delay_print2("You recall him speaking at meal time.\nHe always had the best stories.\n\nWhat 3 skills did your father speak about again?\n\n")
+  delay_print3("You recall him speaking at meal time.\nHe always had the best stories.\n\nWhat skill did your father speak about again?\n\n")
 
 
-  while len(clist) >= 7:
+  for x in clist:
+    print(colored(x, 'red'))
 
-    for x in clist:
-      print(colored(x, 'red'))
+  c_choice = input()
 
-    c_choice = input()
+  if c_choice in clist:
+    delay_print3("\nDefinitely, it was " + c_choice + (".\n"))
+    mylist.append(c_choice)
+    clist.remove(c_choice)
+  else:
+    print("That's no good.")
 
-    if c_choice in clist:
-      print("\nDefinitely, it was " + c_choice)
-      mylist.append(c_choice)
-      clist.remove(c_choice)
-      print("Your skills are as follows:\n ")
-      for x in mylist:
-        print(colored(x, 'green'))
-    else:
-      print("That's no good.")
-
-  #### This is to choose 3 stealth skills ####
-  while len(slist) >= 6:
-
-    for x in slist:
-      print(colored(x, 'yellow'))
+  for x in slist:
+    print(colored(x, 'yellow'))
 
     s_choice = input(str("\n\nWhat will your 3 major stealth skills be?\n\n"))
 
