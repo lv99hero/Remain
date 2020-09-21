@@ -2,6 +2,8 @@ import time
 import sys
 from termcolor import colored, cprint
 
+
+
 def delay_print1(text): ## This will display text at .1 delay
   for c in text:
     sys.stdout.write(c)
