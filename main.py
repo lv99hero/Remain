@@ -42,7 +42,7 @@ def beginnings(): ### Beginning questions for your class ###
   delay_print1("YOU ")
   delay_print2("safe.\n")
   time.sleep(2)
-  delay_print2("You recall him speaking at meal time.\nHe always had the best stories.\n\nWhat 3 skills did your father speak about again?\n\n")
+  delay_print2("What 3 skills did you inherit from your father?\n\n")
 
 
   while len(clist) >= 7:
@@ -53,7 +53,7 @@ def beginnings(): ### Beginning questions for your class ###
     c_choice = input()
 
     if c_choice in clist:
-      print("\nDefinitely, it was " + c_choice)
+      print("\nRight, right." + c_choice)
       mylist.append(c_choice)
       clist.remove(c_choice)
       print("Your skills are as follows:\n ")
